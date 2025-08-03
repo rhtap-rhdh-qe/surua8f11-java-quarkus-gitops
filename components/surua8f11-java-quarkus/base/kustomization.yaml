@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: surua8f11-java-quarkus
+  janus-idp.io/tekton: surua8f11-java-quarkus
+  backstage.io/kubernetes-id: surua8f11-java-quarkus
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: surua8f11-java-quarkus
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
